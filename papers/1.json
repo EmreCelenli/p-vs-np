@@ -1,0 +1,139 @@
+{
+  "paper_id": "aaronson_is_p_vs_np_formally_independent",
+  "paper_number": 1,
+  "paper": {
+    "title": "Is P versus NP formally independent?",
+    "author_list": ["Scott Aaronson"],
+    "year": null,
+    "document_type": "survey",
+    "topic_tags": [
+      "P_vs_NP",
+      "complexity_theory",
+      "lower_bounds",
+      "barriers",
+      "formal_independence"
+    ],
+    "approach_tags": [
+      "survey",
+      "relativization",
+      "natural_proofs",
+      "algebrization",
+      "GCT",
+      "arithmetic_complexity"
+    ],
+    "role_in_benchmark": "control_baseline",
+    "risk_level": "low",
+    "source": {
+      "format": "pdf",
+      "provided_by_user": true,
+      "url": null,
+      "local_path": "Aaronson - IsPvsNPFormallyIndependent.pdf"
+    }
+  },
+  "chunk_plan": {
+    "method": "section_based",
+    "chunks": [
+      {
+        "chunk_id": "A",
+        "label": "Abstract & Introduction",
+        "covers": [
+          "Paper scope; personal perspective on P vs NP; importance and objections"
+        ],
+        "page_start": 1,
+        "page_end": 9
+      },
+      {
+        "chunk_id": "B",
+        "label": "Formalizing P?=NP: Core definitions",
+        "covers": [
+          "NP-completeness; Cook-Levin Theorem; canonical NP-complete problems"
+        ],
+        "page_start": 10,
+        "page_end": 15
+      },
+      {
+        "chunk_id": "C",
+        "label": "Related complexity concepts",
+        "covers": [
+          "Search/decision/optimization; NP-intermediate; coNP; polynomial hierarchy; PSPACE; #P; EXP"
+        ],
+        "page_start": 16,
+        "page_end": 23
+      },
+      {
+        "chunk_id": "D",
+        "label": "Beliefs & difficulty",
+        "covers": [
+          "Why P≠NP is widely believed; technical barriers; clever algorithms vs brute force"
+        ],
+        "page_start": 24,
+        "page_end": 30
+      },
+      {
+        "chunk_id": "E",
+        "label": "Strengthenings of P?=NP",
+        "covers": [
+          "ETH; P/poly; average-case complexity; BPP; BQP; derandomization; quantum algorithms"
+        ],
+        "page_start": 31,
+        "page_end": 39
+      },
+      {
+        "chunk_id": "F",
+        "label": "Progress: Logical & combinatorial techniques",
+        "covers": [
+          "Diagonalization; relativization barrier; proof complexity; monotone circuits; AC0 lower bounds; natural proofs barrier"
+        ],
+        "page_start": 40,
+        "page_end": 56
+      },
+      {
+        "chunk_id": "G",
+        "label": "Progress: Arithmetization & ironic complexity",
+        "covers": [
+          "IP=PSPACE; hybrid circuit lower bounds; algebrization barrier; time-space tradeoffs"
+        ],
+        "page_start": 58,
+        "page_end": 68
+      },
+      {
+        "chunk_id": "H",
+        "label": "Progress: Arithmetic complexity theory",
+        "covers": [
+          "Valiant's Conjecture; permanent vs determinant; arithmetic circuit lower bounds; arithmetic natural proofs"
+        ],
+        "page_start": 72,
+        "page_end": 83
+      },
+      {
+        "chunk_id": "I",
+        "label": "Progress: Geometric Complexity Theory (GCT)",
+        "covers": [
+          "Algebraic geometry approach; symmetries; obstructions; GCT and P vs NP; recent developments; critical assessment"
+        ],
+        "page_start": 84,
+        "page_end": 98
+      },
+      {
+        "chunk_id": "J",
+        "label": "Conclusions, acknowledgments & appendix",
+        "covers": [
+          "Summary; future directions; complexity class glossary; bibliography"
+        ],
+        "page_start": 99,
+        "page_end": 122
+      }
+    ],
+    "dependency_map": {
+      "C_depends_on": ["B"],
+      "D_depends_on": ["B", "C"],
+      "E_depends_on": ["B", "C"],
+      "F_depends_on": ["B", "C", "D"],
+      "G_depends_on": ["F"],
+      "H_depends_on": ["B", "C"],
+      "I_depends_on": ["H"],
+      "J_depends_on": ["A", "B", "C", "D", "E", "F", "G", "H", "I"]
+    }
+  },
+  "runs": []
+}

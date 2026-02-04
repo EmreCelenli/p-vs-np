@@ -1,0 +1,82 @@
+{
+  "paper_id": "anand_elementary_p_neq_np_2007",
+  "paper_number": 5,
+  "paper": {
+    "title": "An elementary proof that P ≠ NP",
+    "author_list": ["Bhupinder Singh Anand"],
+    "year": 2007,
+    "document_type": "proof_claim",
+    "topic_tags": [
+      "P_vs_NP",
+      "Peano_arithmetic",
+      "Godel_incompleteness",
+      "non_standard_models"
+    ],
+    "approach_tags": [
+      "logic",
+      "mathematical_logic",
+      "PA_model_theory",
+      "Turing_computability"
+    ],
+    "role_in_benchmark": "adversarial_proof_claim",
+    "risk_level": "high",
+    "source": {
+      "format": "pdf",
+      "provided_by_user": true,
+      "url": null,
+      "local_path": "Anand - PNotEqualNP.pdf"
+    }
+  },
+  "chunk_plan": {
+    "method": "section_based",
+    "chunks": [
+      {
+        "chunk_id": "A",
+        "label": "Introduction & problem statement",
+        "covers": ["P vs NP formulation via Raz; Boolean tautology definition"],
+        "page_start": 1,
+        "page_end": 2
+      },
+      {
+        "chunk_id": "B",
+        "label": "Gödel's proof and the PvNP problem",
+        "covers": [
+          "Gödel's R(x) formula; Turing-decidable vs Turing-computable distinction; link to P≠NP"
+        ],
+        "page_start": 2,
+        "page_end": 3
+      },
+      {
+        "chunk_id": "C",
+        "label": "Main argument: PA has no non-standard models",
+        "covers": [
+          "Proof that standard first-order PA has no non-standard model; G(x) formula; induction axiom"
+        ],
+        "page_start": 4,
+        "page_end": 5
+      },
+      {
+        "chunk_id": "D",
+        "label": "Conclusions",
+        "covers": ["Theorem 1, Corollary 1 (P ≠ NP), Corollary 2"],
+        "page_start": 5,
+        "page_end": 5
+      },
+      {
+        "chunk_id": "E",
+        "label": "Appendices A, B, C",
+        "covers": [
+          "PA logical axioms/inference rules; PA primitive symbols; standard interpretation M"
+        ],
+        "page_start": 6,
+        "page_end": 8
+      }
+    ],
+    "dependency_map": {
+      "B_depends_on": ["A"],
+      "C_depends_on": ["B", "E"],
+      "D_depends_on": ["B", "C"]
+    }
+  },
+  "runs": []
+}

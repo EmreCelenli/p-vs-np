@@ -1,0 +1,80 @@
+{
+  "paper_id": "anand_density_based_prime_counting_2018_update",
+  "paper_number": 3,
+  "paper": {
+    "title": "A density-based approach for non-heuristic approximations of prime counting functions",
+    "author_list": ["Bhupinder Singh Anand"],
+    "year": 2018,
+    "document_type": "preprint",
+    "topic_tags": [
+      "prime_counting",
+      "number_theory",
+      "approximation",
+      "density_methods"
+    ],
+    "approach_tags": [
+      "probabilistic_density_model",
+      "analytic_number_theory",
+      "asymptotics"
+    ],
+    "role_in_benchmark": "other",
+    "risk_level": "medium",
+    "source": {
+      "format": "pdf",
+      "provided_by_user": true,
+      "url": "http://arxiv.org/abs/1510.04225",
+      "local_path": "Anand - DensityBasedApproach.pdf"
+    }
+  },
+  "chunk_plan": {
+    "method": "section_based",
+    "chunks": [
+      {
+        "chunk_id": "A",
+        "label": "Abstract & overview",
+        "covers": [
+          "Non-heuristic approximations for π(n); density of integers not divisible by small primes"
+        ]
+      },
+      {
+        "chunk_id": "B",
+        "label": "Setup & background",
+        "covers": [
+          "Prime counting context; sieve/divisibility motivation; notation"
+        ]
+      },
+      {
+        "chunk_id": "C",
+        "label": "Density-based estimator construction",
+        "covers": [
+          "Definition of estimator (products over primes); expected counts in intervals"
+        ]
+      },
+      {
+        "chunk_id": "D",
+        "label": "Claims about error bounds / asymptotics",
+        "covers": ["Bounded cumulative error claim; asymptotic comparisons"]
+      },
+      {
+        "chunk_id": "E",
+        "label": "Applications to prime families",
+        "covers": [
+          "Dirichlet primes; twin prime estimates; related counting functions"
+        ]
+      },
+      {
+        "chunk_id": "F",
+        "label": "Appendices / figures / supplemental",
+        "covers": ["Plots, tables, appendices, supporting derivations"]
+      }
+    ],
+    "dependency_map": {
+      "B_depends_on": ["A"],
+      "C_depends_on": ["B"],
+      "D_depends_on": ["C"],
+      "E_depends_on": ["C", "D"],
+      "F_depends_on": ["B", "C", "D", "E"]
+    }
+  },
+  "runs": []
+}

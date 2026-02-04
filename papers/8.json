@@ -1,0 +1,104 @@
+{
+  "paper_id": "aslam_response_to_refutation",
+  "paper_number": 8,
+  "paper": {
+    "title": "Response to Refutation of Aslam's Proof that NP = P",
+    "author_list": ["Javaid Aslam"],
+    "year": 2018,
+    "document_type": "technical_note",
+    "topic_tags": [
+      "perfect_matching",
+      "bipartite_graphs",
+      "VMPs",
+      "edge_requirement",
+      "response_to_criticism"
+    ],
+    "approach_tags": [
+      "permutation_groups",
+      "generating_graphs",
+      "MinSet_sequences",
+      "enumeration"
+    ],
+    "role_in_benchmark": "other",
+    "risk_level": "medium",
+    "source": {
+      "format": "pdf",
+      "provided_by_user": true,
+      "url": null,
+      "local_path": "Aslam - ResponseToRefutation.pdf"
+    }
+  },
+  "chunk_plan": {
+    "method": "section_based",
+    "chunks": [
+      {
+        "chunk_id": "A",
+        "label": "Abstract",
+        "covers": [
+          "Refinement of previous response; new structures for counting VMPs with common ER"
+        ],
+        "page_start": 1,
+        "page_end": 1
+      },
+      {
+        "chunk_id": "B",
+        "label": "Section 1: ER Satisfiability and Enumeration",
+        "covers": [
+          "MinSet Sequences overview; two-step generation process; CVMPSet partition"
+        ],
+        "page_start": 1,
+        "page_end": 2
+      },
+      {
+        "chunk_id": "C",
+        "label": "Section 2: Key Concepts",
+        "covers": [
+          "Stabilizer chains; Sn to PM mapping; generating graph Γ(n); VMPs/CVMPs; MDAG"
+        ],
+        "page_start": 2,
+        "page_end": 4
+      },
+      {
+        "chunk_id": "D",
+        "label": "Section 2.3: The Partition",
+        "covers": [
+          "Edge Requirements; MinSets; VMPs of common ER; CVMPSet structure; generating set GMS"
+        ],
+        "page_start": 4,
+        "page_end": 6
+      },
+      {
+        "chunk_id": "E",
+        "label": "Section 2.4: The Counting Algorithm",
+        "covers": [
+          "Algorithm 2.1; polynomial time bound O(n^45 log n); correctness lemma"
+        ],
+        "page_start": 7,
+        "page_end": 7
+      },
+      {
+        "chunk_id": "F",
+        "label": "Section 3: Counter-example Re-visited",
+        "covers": [
+          "Concrete example with Γ(9); MinSet visualization; corrected evaluation"
+        ],
+        "page_start": 8,
+        "page_end": 8
+      },
+      {
+        "chunk_id": "G",
+        "label": "Acknowledgment & References",
+        "covers": ["Thanks to refutation authors; bibliography"],
+        "page_start": 9,
+        "page_end": 9
+      }
+    ],
+    "dependency_map": {
+      "C_depends_on": ["B"],
+      "D_depends_on": ["C"],
+      "E_depends_on": ["D"],
+      "F_depends_on": ["D", "E"]
+    }
+  },
+  "runs": []
+}

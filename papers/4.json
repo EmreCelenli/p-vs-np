@@ -1,0 +1,81 @@
+{
+  "paper_id": "anand_halting_godel_np_not_p",
+  "paper_number": 4,
+  "paper": {
+    "title": "Is the Halting problem effectively solvable non-algorithmically, and is the Gödel sentence in NP, but not in P?",
+    "author_list": ["Bhupinder Singh Anand"],
+    "year": null,
+    "document_type": "preprint",
+    "topic_tags": [
+      "halting_problem",
+      "godel_sentence",
+      "PA",
+      "NP_vs_P_claims",
+      "computability"
+    ],
+    "approach_tags": [
+      "philosophy_of_computation",
+      "logic",
+      "complexity_class_claims"
+    ],
+    "role_in_benchmark": "mixed",
+    "risk_level": "high",
+    "source": {
+      "format": "pdf",
+      "provided_by_user": true,
+      "url": null,
+      "local_path": "Anand - HaltingProblemAndGodelSentence.pdf"
+    }
+  },
+  "chunk_plan": {
+    "method": "section_based",
+    "chunks": [
+      {
+        "chunk_id": "A",
+        "label": "Abstract & headline claims",
+        "covers": [
+          "Claims about halting problem solvable non-algorithmically; Gödel predicate in NP not P"
+        ]
+      },
+      {
+        "chunk_id": "B",
+        "label": "Background theses",
+        "covers": [
+          "Church/Turing thesis discussion; proposed 'Provability Thesis' framing"
+        ]
+      },
+      {
+        "chunk_id": "C",
+        "label": "Main argument structure",
+        "covers": [
+          "Implications drawn from the thesis; computability consequences"
+        ]
+      },
+      {
+        "chunk_id": "D",
+        "label": "Complexity-class assertions",
+        "covers": [
+          "Arguments placing Gödel predicate in NP but not P; links to thesis assumptions"
+        ]
+      },
+      {
+        "chunk_id": "E",
+        "label": "Corollaries & conclusion",
+        "covers": ["Corollaries about halting and Turing thesis; summary"]
+      },
+      {
+        "chunk_id": "F",
+        "label": "References",
+        "covers": ["Bibliography and cited sources"]
+      }
+    ],
+    "dependency_map": {
+      "B_depends_on": ["A"],
+      "C_depends_on": ["B"],
+      "D_depends_on": ["B", "C"],
+      "E_depends_on": ["C", "D"],
+      "F_depends_on": ["A", "B", "C", "D", "E"]
+    }
+  },
+  "runs": []
+}

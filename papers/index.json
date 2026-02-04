@@ -1,0 +1,86 @@
+{
+  "index_version": "1.0",
+  "updated": "2026-02-04",
+  "papers": [
+    {
+      "paper_number": 1,
+      "paper_id": "aaronson_is_p_vs_np_formally_independent",
+      "title": "Is P versus NP formally independent?",
+      "first_author_last_name": "Aaronson",
+      "document_type": "survey",
+      "role_in_benchmark": "control_baseline"
+    },
+    {
+      "paper_number": 2,
+      "paper_id": "akbari_clique_polytime_2008",
+      "title": "A Deterministic Polynomial-time Algorithm for the Clique Problem and the Equality of P and NP Complexity Classes",
+      "first_author_last_name": "Akbari",
+      "document_type": "proof_claim",
+      "role_in_benchmark": "adversarial_proof_claim"
+    },
+    {
+      "paper_number": 3,
+      "paper_id": "anand_density_based_prime_counting_2018_update",
+      "title": "A density-based approach for non-heuristic approximations of prime counting functions",
+      "first_author_last_name": "Anand",
+      "document_type": "preprint",
+      "role_in_benchmark": "other"
+    },
+    {
+      "paper_number": 4,
+      "paper_id": "anand_halting_godel_np_not_p",
+      "title": "Is the Halting problem effectively solvable non-algorithmically, and is the Gödel sentence in NP, but not in P?",
+      "first_author_last_name": "Anand",
+      "document_type": "preprint",
+      "role_in_benchmark": "mixed"
+    },
+    {
+      "paper_number": 5,
+      "paper_id": "anand_elementary_p_neq_np_2007",
+      "title": "An elementary proof that P ≠ NP",
+      "first_author_last_name": "Anand",
+      "document_type": "proof_claim",
+      "role_in_benchmark": "adversarial_proof_claim"
+    },
+    {
+      "paper_number": 6,
+      "paper_id": "annila_physical_portrayal_complexity",
+      "title": "Physical portrayal of computational complexity",
+      "first_author_last_name": "Annila",
+      "document_type": "proof_claim",
+      "role_in_benchmark": "adversarial_proof_claim"
+    },
+    {
+      "paper_number": 7,
+      "paper_id": "aslam_collapse_polynomial_hierarchy",
+      "title": "The Collapse of the Polynomial Hierarchy: NP = P",
+      "first_author_last_name": "Aslam",
+      "document_type": "proof_claim",
+      "role_in_benchmark": "adversarial_proof_claim"
+    },
+    {
+      "paper_number": 8,
+      "paper_id": "aslam_response_to_refutation",
+      "title": "Response to Refutation of Aslam's Proof that NP = P",
+      "first_author_last_name": "Aslam",
+      "document_type": "technical_note",
+      "role_in_benchmark": "other"
+    },
+    {
+      "paper_number": 9,
+      "paper_id": "barbosa_p_neq_np_xgsat",
+      "title": "P ≠ NP Proof",
+      "first_author_last_name": "Barbosa",
+      "document_type": "proof_claim",
+      "role_in_benchmark": "adversarial_proof_claim"
+    },
+    {
+      "paper_number": 10,
+      "paper_id": "barron_romero_np_complexity_2010",
+      "title": "The Complexity Of The NP-Class",
+      "first_author_last_name": "Barrón Romero",
+      "document_type": "proof_claim",
+      "role_in_benchmark": "adversarial_proof_claim"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "paper_id": "barron_romero_np_complexity_2010",
+  "paper_number": 10,
+  "paper": {
+    "title": "The Complexity Of The NP-Class",
+    "author_list": ["Carlos Barrón Romero"],
+    "year": 2010,
+    "document_type": "proof_claim",
+    "topic_tags": [
+      "NP_complexity",
+      "Lennard_Jones_clusters",
+      "TSP",
+      "GAP",
+      "search_space_analysis"
+    ],
+    "approach_tags": [
+      "graph_theory",
+      "assignment_problems",
+      "lattice_methods",
+      "polynomial_reduction"
+    ],
+    "role_in_benchmark": "adversarial_proof_claim",
+    "risk_level": "high",
+    "source": {
+      "format": "pdf",
+      "provided_by_user": true,
+      "url": null,
+      "local_path": "BarronRomero - ComplexityOfNPClass.pdf"
+    }
+  },
+  "chunk_plan": {
+    "method": "section_based",
+    "chunks": [
+      {
+        "chunk_id": "A",
+        "label": "Abstract & Introduction",
+        "covers": [
+          "NP-Class complexity claim; Proposition 1.1 (no polynomial checking); notation"
+        ],
+        "page_start": 1,
+        "page_end": 2
+      },
+      {
+        "chunk_id": "B",
+        "label": "Section 2: Lennard-Jones Problem",
+        "covers": [
+          "LJPn definition; lattices (IC, FC, IF, CB); Propositions 2.1-2.4; search space exponentiality"
+        ],
+        "page_start": 2,
+        "page_end": 5
+      },
+      {
+        "chunk_id": "C",
+        "label": "Section 3: General Assign Problem",
+        "covers": [
+          "GAPn definition; TSPn variants; Propositions 3.2-3.8; properties & enumeration"
+        ],
+        "page_start": 6,
+        "page_end": 10
+      },
+      {
+        "chunk_id": "D",
+        "label": "Section 4: Integer Problem Formulation",
+        "covers": [
+          "IPGAPn formulation; feasible point equivalence; pivot strategies"
+        ],
+        "page_start": 10,
+        "page_end": 11
+      },
+      {
+        "chunk_id": "E",
+        "label": "Section 5: Turing Machine & Finite Automata",
+        "covers": [
+          "TM vs FA comparisons; problems P1-P4; mark-locating complexity analogies"
+        ],
+        "page_start": 11,
+        "page_end": 14
+      },
+      {
+        "chunk_id": "F",
+        "label": "Section 6: Reducibility",
+        "covers": [
+          "Definition 3 (alternatives); tubes; polynomial reduction conditions; Propositions 6.1-6.12; 2D Euclidean TSP tractability; GAPn intractability"
+        ],
+        "page_start": 14,
+        "page_end": 29
+      },
+      {
+        "chunk_id": "G",
+        "label": "Conclusions & Acknowledgment",
+        "covers": [
+          "Summary; frontier analysis; future work on mD cases; quantum computing mention"
+        ],
+        "page_start": 29,
+        "page_end": 30
+      },
+      {
+        "chunk_id": "H",
+        "label": "References",
+        "covers": ["Bibliography"],
+        "page_start": 30,
+        "page_end": 31
+      }
+    ],
+    "dependency_map": {
+      "C_depends_on": ["B"],
+      "D_depends_on": ["C"],
+      "E_depends_on": ["C"],
+      "F_depends_on": ["C", "D", "E"],
+      "G_depends_on": ["F"]
+    }
+  },
+  "runs": []
+}

@@ -1,0 +1,82 @@
+{
+  "paper_id": "aslam_collapse_polynomial_hierarchy",
+  "paper_number": 7,
+  "paper": {
+    "title": "The Collapse of the Polynomial Hierarchy: NP = P",
+    "author_list": ["Javaid Aslam"],
+    "year": 2008,
+    "document_type": "proof_claim",
+    "topic_tags": [
+      "P_vs_NP",
+      "polynomial_hierarchy",
+      "perfect_matching",
+      "permutation_groups"
+    ],
+    "approach_tags": [
+      "graph_theory",
+      "bipartite_graphs",
+      "permutation_enumeration",
+      "generating_sets"
+    ],
+    "role_in_benchmark": "adversarial_proof_claim",
+    "risk_level": "high",
+    "source": {
+      "format": "pdf",
+      "provided_by_user": true,
+      "url": null,
+      "local_path": "Aslam - CollapseOfPolynomialHierarchy.pdf"
+    }
+  },
+  "chunk_plan": {
+    "method": "section_based",
+    "chunks": [
+      {
+        "chunk_id": "A",
+        "label": "Abstract & claim",
+        "covers": ["Claims NP=P via polynomial-time perfect matching counting"]
+      },
+      {
+        "chunk_id": "B",
+        "label": "Introduction & motivation",
+        "covers": ["Perfect matching problem background; historical context"]
+      },
+      {
+        "chunk_id": "C",
+        "label": "Core technique: Sn generating sets",
+        "covers": [
+          "Mapping symmetric group generators to graph-theoretic generators; stabilizer chains"
+        ]
+      },
+      {
+        "chunk_id": "D",
+        "label": "Generating graph & CVMP paths",
+        "covers": ["Γ(n) definition; VMPs and CVMPs; edge requirements"]
+      },
+      {
+        "chunk_id": "E",
+        "label": "Partition & MinSet sequences",
+        "covers": ["CVMPSet partition; MinSet definition; covering MinSets"]
+      },
+      {
+        "chunk_id": "F",
+        "label": "Counting algorithm & complexity",
+        "covers": [
+          "Algorithm 2.1; claimed O(n^45 log n) time; correctness lemma"
+        ]
+      },
+      {
+        "chunk_id": "G",
+        "label": "Conclusion & acknowledgment",
+        "covers": ["Implications; thanks to refutation authors"]
+      }
+    ],
+    "dependency_map": {
+      "C_depends_on": ["B"],
+      "D_depends_on": ["C"],
+      "E_depends_on": ["D"],
+      "F_depends_on": ["E"],
+      "G_depends_on": ["F"]
+    }
+  },
+  "runs": []
+}

@@ -1,0 +1,119 @@
+{
+  "paper_id": "barbosa_p_neq_np_xgsat",
+  "paper_number": 9,
+  "paper": {
+    "title": "P ≠ NP Proof",
+    "author_list": ["André Luiz Barbosa"],
+    "year": 2009,
+    "document_type": "proof_claim",
+    "topic_tags": [
+      "P_vs_NP",
+      "XG_SAT",
+      "complexity_class_generalization",
+      "Cook_Levin_refutation"
+    ],
+    "approach_tags": [
+      "Lz_languages",
+      "restricted_type_X_programs",
+      "diagonalization",
+      "Rice_theorem"
+    ],
+    "role_in_benchmark": "adversarial_proof_claim",
+    "risk_level": "high",
+    "source": {
+      "format": "pdf",
+      "provided_by_user": true,
+      "url": null,
+      "local_path": "Barbosa - PNotEqualNPProof.pdf"
+    }
+  },
+  "chunk_plan": {
+    "method": "section_based",
+    "chunks": [
+      {
+        "chunk_id": "A",
+        "label": "Abstract & Contents",
+        "covers": [
+          "Proof structure outline; claim of three revolutionary ideas; language incompleteness"
+        ],
+        "page_start": 1,
+        "page_end": 2
+      },
+      {
+        "chunk_id": "B",
+        "label": "Section 1: Introduction",
+        "covers": [
+          "Motivation for generalization; restating P vs NP; Barbosa's Program"
+        ],
+        "page_start": 2,
+        "page_end": 3
+      },
+      {
+        "chunk_id": "C",
+        "label": "Section 2: Restricted Type X Program",
+        "covers": [
+          "Definition 2.1; three conditions; Notes 1-4 on uniformity and polynomial bounds"
+        ],
+        "page_start": 3,
+        "page_end": 4
+      },
+      {
+        "chunk_id": "D",
+        "label": "Section 3: XG-SAT Definition",
+        "covers": [
+          "Definition 3.1-3.3; well-formed strings; Lz-languages; generalized P and NP (Defs 3.5-3.7)"
+        ],
+        "page_start": 4,
+        "page_end": 11
+      },
+      {
+        "chunk_id": "E",
+        "label": "Section 3.4: Decision problems & Cook-Levin falseness",
+        "covers": ["Definition 3.8; claims Cook-Levin Theorem is false"],
+        "page_start": 12,
+        "page_end": 12
+      },
+      {
+        "chunk_id": "F",
+        "label": "Section 4: XG-SAT is in NP",
+        "covers": ["Old demonstration using NTM; SAT as special case"],
+        "page_start": 12,
+        "page_end": 13
+      },
+      {
+        "chunk_id": "G",
+        "label": "Section 5: XG-SAT is not in P",
+        "covers": [
+          "Theorem 5.1; four exhaustive ways Q can act; Propositions 5.2-5.4; diagonalization"
+        ],
+        "page_start": 14,
+        "page_end": 22
+      },
+      {
+        "chunk_id": "H",
+        "label": "Sections 6-10: Barrier theorems & discussion",
+        "covers": [
+          "Baker-Gill-Solovay; Razborov-Rudich; Aaronson-Wigderson; expert advice; freedom & mathematics"
+        ],
+        "page_start": 22,
+        "page_end": 24
+      },
+      {
+        "chunk_id": "I",
+        "label": "References",
+        "covers": ["Bibliography"],
+        "page_start": 24,
+        "page_end": 25
+      }
+    ],
+    "dependency_map": {
+      "C_depends_on": ["B"],
+      "D_depends_on": ["C"],
+      "E_depends_on": ["D"],
+      "F_depends_on": ["D", "E"],
+      "G_depends_on": ["C", "D", "F"],
+      "H_depends_on": ["G"]
+    }
+  },
+  "runs": []
+}

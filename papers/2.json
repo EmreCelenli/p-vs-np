@@ -1,0 +1,73 @@
+{
+  "paper_id": "akbari_clique_polytime_2008",
+  "paper_number": 2,
+  "paper": {
+    "title": "A Deterministic Polynomial-time Algorithm for the Clique Problem and the Equality of P and NP Complexity Classes",
+    "author_list": ["Zohreh O. Akbari"],
+    "year": 2008,
+    "document_type": "proof_claim",
+    "topic_tags": ["CLIQUE", "P_vs_NP", "NP_complete", "graph_algorithms"],
+    "approach_tags": [
+      "graph_adjacency_matrix",
+      "algorithm_claim",
+      "runtime_claim"
+    ],
+    "role_in_benchmark": "adversarial_proof_claim",
+    "risk_level": "high",
+    "source": {
+      "format": "pdf",
+      "provided_by_user": true,
+      "url": null,
+      "local_path": "Akbari - DeterministicPolynomialTimeAlgorithmForCliqueProblem.pdf"
+    }
+  },
+  "chunk_plan": {
+    "method": "section_based",
+    "chunks": [
+      {
+        "chunk_id": "A",
+        "label": "Abstract & claim",
+        "covers": [
+          "Claims deterministic polynomial-time algorithm for CLIQUE; implies P=NP"
+        ]
+      },
+      {
+        "chunk_id": "B",
+        "label": "Background & problem definition",
+        "covers": ["Definitions of P/NP/NP-complete; clique definition"]
+      },
+      {
+        "chunk_id": "C",
+        "label": "Core idea & reformulation",
+        "covers": [
+          "Adjacency/inaccessibility matrix reformulation; minimum-vertex deletion framing"
+        ]
+      },
+      {
+        "chunk_id": "D",
+        "label": "Algorithm description",
+        "covers": ["Minimum Nil Sweeper method; pseudocode-level procedure"]
+      },
+      {
+        "chunk_id": "E",
+        "label": "Correctness argument",
+        "covers": ["Induction-style proof sketch; lemma/theorem statements"]
+      },
+      {
+        "chunk_id": "F",
+        "label": "Runtime analysis & conclusion",
+        "covers": [
+          "Claims polynomial runtime (e.g., O(|V|^3)); P=NP conclusion"
+        ]
+      }
+    ],
+    "dependency_map": {
+      "B_depends_on": ["A"],
+      "C_depends_on": ["B"],
+      "D_depends_on": ["C"],
+      "E_depends_on": ["D"],
+      "F_depends_on": ["D", "E"]
+    }
+  },
+  "runs": []
+}

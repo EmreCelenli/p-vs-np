@@ -1,0 +1,118 @@
+{
+  "paper_id": "annila_physical_portrayal_complexity",
+  "paper_number": 6,
+  "paper": {
+    "title": "Physical portrayal of computational complexity",
+    "author_list": ["Arto Annila"],
+    "year": null,
+    "document_type": "proof_claim",
+    "topic_tags": [
+      "P_vs_NP",
+      "thermodynamics",
+      "entropy",
+      "degrees_of_freedom"
+    ],
+    "approach_tags": [
+      "physics",
+      "2nd_law_thermodynamics",
+      "energy_dispersal",
+      "statistical_mechanics",
+      "gradient_systems"
+    ],
+    "role_in_benchmark": "adversarial_proof_claim",
+    "risk_level": "high",
+    "source": {
+      "format": "pdf",
+      "provided_by_user": true,
+      "url": null,
+      "local_path": "Annila - PhysicalPortrayalOfComplexity.pdf"
+    }
+  },
+  "chunk_plan": {
+    "method": "section_based",
+    "chunks": [
+      {
+        "chunk_id": "A",
+        "label": "Abstract & Introduction",
+        "covers": [
+          "P vs NP ambiguity; 2nd law motivation; energy transduction framework"
+        ],
+        "page_start": 1,
+        "page_end": 1
+      },
+      {
+        "chunk_id": "B",
+        "label": "Computation as physical process",
+        "covers": [
+          "Energy dispersal; irreversible thermalization; degrees of freedom n≥3"
+        ],
+        "page_start": 2,
+        "page_end": 3
+      },
+      {
+        "chunk_id": "C",
+        "label": "Self-similar circuits",
+        "covers": [
+          "Hierarchical formalism; probability measure Pk; flows & gradients"
+        ],
+        "page_start": 3,
+        "page_end": 4
+      },
+      {
+        "chunk_id": "D",
+        "label": "Computation as probable process & manifold in motion",
+        "covers": [
+          "Entropy increase principle; evolving landscape; geodesics; virial theorem"
+        ],
+        "page_start": 5,
+        "page_end": 7
+      },
+      {
+        "chunk_id": "E",
+        "label": "Intractability in degrees of freedom",
+        "covers": [
+          "n-body problems; SAT variants; degrees of freedom criterion"
+        ],
+        "page_start": 7,
+        "page_end": 8
+      },
+      {
+        "chunk_id": "F",
+        "label": "State spaces of automata",
+        "covers": [
+          "NFA vs DFA correspondence; circuit sizes; power set arguments"
+        ],
+        "page_start": 8,
+        "page_end": 9
+      },
+      {
+        "chunk_id": "G",
+        "label": "Measures of states & Theorem",
+        "covers": [
+          "Mathematical formalization; measure spaces; Theorem 8.16 (P⊂NP)"
+        ],
+        "page_start": 10,
+        "page_end": 13
+      },
+      {
+        "chunk_id": "H",
+        "label": "Discussion & References",
+        "covers": [
+          "Connection to natural law; scope & applicability; bibliography"
+        ],
+        "page_start": 13,
+        "page_end": 16
+      }
+    ],
+    "dependency_map": {
+      "B_depends_on": ["A"],
+      "C_depends_on": ["B"],
+      "D_depends_on": ["C"],
+      "E_depends_on": ["D"],
+      "F_depends_on": ["E"],
+      "G_depends_on": ["B", "C", "D", "E", "F"],
+      "H_depends_on": ["G"]
+    }
+  },
+  "runs": []
+}

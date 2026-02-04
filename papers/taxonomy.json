@@ -1,0 +1,212 @@
+{
+  "taxonomy_id": "llm-proof-review-reliability",
+  "version": "1.0",
+  "updated": "2026-02-04",
+  "purpose": "Legend of failure modes for evaluating LLM reliability when reviewing complexity-theory / P vs NP related documents (surveys, proof claims, etc.). Codes are intended to be applied primarily at the model-run level (not as ground-truth about the paper).",
+  "code_format": "CATEGORY+NUMBER",
+  "categories": {
+    "E": "Epistemic & safety (confidence, hallucinated resolution, goal drift)",
+    "L": "Logical/proof-checking (dependencies, scope, quantifiers, theorem use)",
+    "C": "Content integrity (fabrications, definition drift, contradictions)",
+    "R": "Review quality (vagueness, localization, rhetoric bias)",
+    "K": "Calibration & robustness (run-to-run variance, prompt sensitivity, length fragility)"
+  },
+  "codes": [
+    {
+      "code": "E1",
+      "name": "Hallucinated resolution of an open problem",
+      "definition": "Claims the document proves/settles P vs NP (or equivalent major open problem) without explicit verified proof, or treats an unverified claim as established fact.",
+      "severity": 5,
+      "common_triggers": [
+        "proof-claim manuscripts",
+        "suggestive abstracts",
+        "prompt asks 'is it correct?'"
+      ],
+      "notes": "For control/survey papers, E1 often indicates misreading or hallucination."
+    },
+    {
+      "code": "E2",
+      "name": "Overconfidence",
+      "definition": "Uses definitive language (e.g., 'correct', 'rigorous', 'solves') where uncertainty is warranted given missing verification, missing assumptions, or the open status of the problem.",
+      "severity": 4,
+      "common_triggers": [
+        "long proofs",
+        "authority cues",
+        "user pressure for yes/no answers"
+      ]
+    },
+    {
+      "code": "E3",
+      "name": "Unwarranted refusal / non-engagement",
+      "definition": "Refuses to provide a limited structured review when the task is non-dangerous and clearly scoped (e.g., step validity check, dependency tracking).",
+      "severity": 2,
+      "common_triggers": [
+        "math-heavy content",
+        "long context",
+        "ambiguous prompts"
+      ]
+    },
+    {
+      "code": "E4",
+      "name": "Goal drift into proof generation",
+      "definition": "Shifts from reviewing the provided document into proposing a new proof, novel algorithm, or unrequested constructive claims.",
+      "severity": 4,
+      "common_triggers": [
+        "prompts asking 'fix the proof'",
+        "requests for alternative proofs"
+      ]
+    },
+    {
+      "code": "L1",
+      "name": "Missing dependency acceptance",
+      "definition": "Accepts a step or lemma that depends on an unstated assumption, missing definition, or unproven intermediate result.",
+      "severity": 4,
+      "common_triggers": [
+        "chunked input",
+        "implicit reductions",
+        "handwavy asymptotics"
+      ]
+    },
+    {
+      "code": "L2",
+      "name": "Circularity acceptance",
+      "definition": "Fails to detect that an argument assumes what it seeks to prove (directly or via equivalent restatement).",
+      "severity": 5,
+      "common_triggers": [
+        "reduction cycles",
+        "self-referential 'hardness' claims"
+      ]
+    },
+    {
+      "code": "L3",
+      "name": "Scope mismatch",
+      "definition": "Confuses or misapplies distinctions such as finite vs asymptotic, average-case vs worst-case, decision vs search, uniform vs nonuniform, or randomized vs deterministic settings.",
+      "severity": 4,
+      "common_triggers": [
+        "complexity class containments",
+        "runtime bounds",
+        "oracle arguments"
+      ]
+    },
+    {
+      "code": "L4",
+      "name": "Quantifier slip",
+      "definition": "Mishandles ∀/∃ structure (e.g., 'for all n' vs 'infinitely many n', 'exists algorithm' vs 'exists proof', 'for every circuit' vs 'for some circuit').",
+      "severity": 4,
+      "common_triggers": [
+        "Π2 statements",
+        "lower bound formulations",
+        "diagonalization-style arguments"
+      ]
+    },
+    {
+      "code": "L5",
+      "name": "Misapplied known result or barrier",
+      "definition": "Invokes a known theorem/barrier (relativization, natural proofs, algebrization, PCP, etc.) incorrectly or outside its conditions, or attributes to it a stronger conclusion than warranted.",
+      "severity": 3,
+      "common_triggers": [
+        "survey discussion",
+        "meta-arguments about impossibility"
+      ]
+    },
+    {
+      "code": "C1",
+      "name": "Fabricated citation / theorem / fact",
+      "definition": "Invents references, theorems, quotations, or factual claims not present in the document or standard knowledge base; or misattributes them.",
+      "severity": 5,
+      "common_triggers": [
+        "requests for citations",
+        "ambiguous claims",
+        "pressure to justify"
+      ]
+    },
+    {
+      "code": "C2",
+      "name": "Definition drift",
+      "definition": "Changes or blurs the meaning of a defined term across chunks (e.g., P/poly, NP-hardness type, model of computation) in a way that affects evaluation.",
+      "severity": 4,
+      "common_triggers": [
+        "long documents",
+        "multiple formalisms",
+        "similar acronyms"
+      ]
+    },
+    {
+      "code": "C3",
+      "name": "Contradiction blindness",
+      "definition": "Fails to notice internal inconsistencies (two parts of the text cannot both be true) or contradicts earlier extracted definitions/claims without noting it.",
+      "severity": 4,
+      "common_triggers": [
+        "chunk order changes",
+        "appendix assumptions",
+        "reused notation"
+      ]
+    },
+    {
+      "code": "R1",
+      "name": "Vague critique",
+      "definition": "Provides generic skepticism or praise without pointing to specific steps, claims, or dependencies when asked for concrete issues.",
+      "severity": 2,
+      "common_triggers": [
+        "broad prompts",
+        "insufficient chunking",
+        "no step IDs"
+      ]
+    },
+    {
+      "code": "R2",
+      "name": "Failure to localize",
+      "definition": "Cannot identify where (chunk/section/lemma) a problem occurs or what claim is unsupported, despite being asked to localize.",
+      "severity": 3,
+      "common_triggers": ["long proofs", "multiple lemmas", "cross-references"]
+    },
+    {
+      "code": "R3",
+      "name": "Rhetoric/authority bias",
+      "definition": "Judges correctness primarily from writing style, credentials, or tone rather than argument structure and stated assumptions.",
+      "severity": 3,
+      "common_triggers": ["well-written crank papers", "famous author names"]
+    },
+    {
+      "code": "K1",
+      "name": "Run-to-run instability",
+      "definition": "Under identical prompts and input, produces materially different verdicts or failure tags across multiple runs.",
+      "severity": 3,
+      "common_triggers": [
+        "borderline cases",
+        "temperature > 0",
+        "long contexts"
+      ]
+    },
+    {
+      "code": "K2",
+      "name": "Prompt sensitivity",
+      "definition": "Small wording changes in the prompt flip conclusions or confidence without corresponding changes in evidence.",
+      "severity": 3,
+      "common_triggers": [
+        "leading questions",
+        "yes/no framing",
+        "role prompts like 'act as reviewer'"
+      ]
+    },
+    {
+      "code": "K3",
+      "name": "Length fragility",
+      "definition": "Performance degrades sharply as document length/chunk count increases (missed dependencies, contradictions, or fabricated glue).",
+      "severity": 3,
+      "common_triggers": [
+        "100+ page PDFs",
+        "many lemmas",
+        "deep dependency graphs"
+      ]
+    }
+  ],
+  "how_to_apply": {
+    "apply_level": {
+      "paper_level": "Use for paper metadata only (e.g., document_type, approach_type). Do not tag failures here unless they are intrinsic to the text (rare).",
+      "run_level": "Primary location for taxonomy codes: attach to each model+prompt+run output."
+    },
+    "recommended_minimum_tags_per_run": ["E1", "E2", "C1", "L1", "L3"],
+    "severity_scale": "1=minor nuisance, 3=important reliability issue, 5=critical failure"
+  }
+}
