@@ -1,0 +1,71 @@
+{
+  "version": "1.0",
+
+  "macro_definition": {
+    "first_error_rule": "The first error is the earliest MAJOR claim, theorem, or numbered statement whose conclusion is not sufficiently supported by previous statements, accepting all author assumptions.",
+    "unit_of_analysis": "major_claim",
+    "ignore_micro_steps": true,
+    "stop_at_first_major_break": true
+  },
+
+  "rules": [
+    "Accept author assumptions and definitions.",
+    "Identify only the FIRST error.",
+    "Stop analysis at first error.",
+    "Do not classify philosophical disagreement as an error."
+  ],
+
+  "required_output_format": {
+    "style": "one_record",
+    "fields": [
+      "paper_title",
+      "first_unsupported_major_claim",
+      "section",
+      "taxonomy_code",
+      "reason"
+    ]
+  },
+
+  "error_codes": [
+    {
+      "code": "E1",
+      "name": "Missing dependency",
+      "description": "A claim uses a result, definition, or assumption that has not been established earlier."
+    },
+    {
+      "code": "E2",
+      "name": "Non-sequitur step",
+      "description": "The conclusion does not logically follow from previous statements."
+    },
+    {
+      "code": "E3",
+      "name": "Quantifier or scope shift",
+      "description": "Changes meaning between existence/universality, finite/asymptotic, or instance/general case."
+    },
+    {
+      "code": "E4",
+      "name": "Complexity-class misuse",
+      "description": "Incorrect reasoning about complexity classes or reductions (e.g., NP-complete, P, NP, polynomial time)."
+    },
+    {
+      "code": "E5",
+      "name": "Hidden exponential step",
+      "description": "Algorithm claimed polynomial includes an implicit exponential search or branching."
+    },
+    {
+      "code": "E6",
+      "name": "Circular reasoning",
+      "description": "The argument assumes what it tries to prove."
+    },
+    {
+      "code": "E7",
+      "name": "Model shift",
+      "description": "Changes computational model or assumptions without explicitly stating it."
+    },
+    {
+      "code": "E8",
+      "name": "Informal leap",
+      "description": "Argument becomes hand-wavy or heuristic without a valid formal step."
+    }
+  ]
+}
